@@ -1,4 +1,4 @@
-# Handow - E2E framework on browser for UAT
+# Handow - Hand shadowing play UAT
 
 User need to do 3 things to use Handow UAT tool:
 
