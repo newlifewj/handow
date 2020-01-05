@@ -1,0 +1,17 @@
+
+.xhrpanel {
+    border-top: 1px lightgray solid;
+    background-color: ghostwhite;
+    padding: 10px 20px;
+    div {
+        margin-top: 15px;
+        pre {
+            margin: 5px 0px;
+            padding: 8px;
+            background-color: white;
+            border: 1px lightgray solid;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    }
+}

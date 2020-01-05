@@ -1,0 +1,45 @@
+.step {
+    padding: 10px;
+    border-bottom: 1px lightgray dotted;
+}
+
+.title {
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+}
+
+.screenIcon {
+    margin-right: 3px;
+    float: right; 
+    border: 1px grey solid;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+    max-height: 30px;
+    overflow-y: hidden;
+}
+
+.cookiesIcon {
+    margin: 3px 0px;
+    cursor: pointer;
+    height: 22px;
+    min-width: 32px;
+    &:hover {
+        opacity: 0.5;
+    }
+    background-color: transparent;
+    background-image: url('../../../../assets/images/cookies-icon.gif');
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // font-size: 8px
+}
+
+.xhrIcon {
+    margin: 3px 5px 5px 0px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+}

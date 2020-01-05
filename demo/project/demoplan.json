@@ -1,0 +1,23 @@
+{
+    "title": "Demo UAT",
+    "stages": [
+        {
+            "stage": "Test stage 1",
+            "description": "This is the first stage to verify ...",
+            "stories": [ "Handow_Summary" ]
+        },
+        {
+            "stage": "Test stage 2",
+            "description": "This is the 2nd stage to test ...",
+            "stories": [ "Handow_Stage", "Handow_Detail", "Handow_Phase" ]
+        }
+    ],
+    "config": {
+        "consoleOutput": "story",
+        "outputSkipInfo": false,
+        "newIncognitoContext": true,
+        "headlessChromium": false,
+        "workers": 3,
+        "saveJsonReport": true
+    }
+}

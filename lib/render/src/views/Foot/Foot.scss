@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+
+.foot {
+    height: 80px;
+    padding: 30px $space-lr;
+    background-color: $color-x-dark-grey;
+    text-align: center;
+    color: white;
+    .support {
+        // position: absolute;
+        color: grey;
+        bottom: 15px;
+        right: $space-lr;
+        font-size: 0.7em;
+    }
+}
+
+
