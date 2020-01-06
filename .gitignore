@@ -14,11 +14,13 @@
 *.rar
 *.tmp
 *.zip
+# /config.js
 
 node_modules
 sessions
 reports
 build
+stepBundles
 
 .project
 .vscode

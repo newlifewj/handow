@@ -5,13 +5,11 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development npm run set-mode && npm run merge-json && npm run dev-server",
+    "start": "cross-env npm run merge-json && npm run dev-server",
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.dev.js",
-    "build": "cross-env npm run set-mode && npm run merge-json && npm run build-prod && npm run copy-font",
+    "build": "cross-env npm run merge-json && npm run build-prod",
     "build-prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js",
-    "merge-json": "node utils/mergeJsons.js",
-    "set-mode": "node utils/setMode.js",
-    "copy-font": "cross-env copyfiles assets/font/*.ttf dist"
+    "merge-json": "node src/mergeJsons.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
