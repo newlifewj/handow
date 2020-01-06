@@ -17,10 +17,17 @@
 # /config.js
 
 node_modules
-sessions
 reports
 build
 stepBundles
+
+# ignore for github respo
+render/src
+render/.eslintrc
+render/package.json
+render/package-lock.json
+render/webpack.config.dev.js
+render/webpack.config.prod.js
 
 .project
 .vscode
