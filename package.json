@@ -16,8 +16,9 @@
     },
     "scripts": {
         "start": "",
-        "test": "npm run buildsteps && npm run story",
-        "buildsteps": "node ./core/handow --buildsteps",
+        "demostory": "node ./lib/handow --story --/demo/project/stories/demostory",
+        "demoplan": "node ./lib/handow --plan --/demo/project/demoplan",
+        "buildsteps": "node ./lib/handow --buildsteps",
         "handow": "cross-env NODE_PROGRAM=handow node ./core/handow.js"
     },
     "dependencies": {

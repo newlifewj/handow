@@ -1,42 +1,29 @@
-# Handow (hand shadowing play UAT), the e2e BDD test tool for webapp UAT
+# Handow (hand shadowing play UAT), the e2e BDD test tool for webapp
 
-User need to do 3 things to use Handow UAT tool:
+There is not doubt that any program should be developed along with testing projects. There are so many testing types, framworks and tools. Each of them helps us in some way or another, and also has its specific drawbacks. If only one is allowed to deploy for our developing application, unfortunately it is usually, I will pick an e2e type UAT. Because a duck test can cover the whole application and, wothout surprise, it is usually the customers requirement. Handow is a tool and library to generate UAT project for browser oriented apps.
 
-+ Create stories, e.g. .feature files in _/project/stories/_
-+ Add custom steps if they need steps not exisited in built-in step library, e.g. .js files in _/project/steps/
-+ Create plans, e.g. .json files under _/project_
+## Features
 
-## DEMO run
++ Gherkin syntax compatible
++ Chrome orentied with Puppeteer driver
++ Complete JavaScript programming
++ Create test rapidly without coding (or a little bit code) basing on built-in steps library
++ Schedule test with plan and plan runner
++ Fast running by parallel stories with stages
++ Built-in single page report render
++ Cover page view and REST API testing
 
-Enter the _/core/_ directory:
+## See demo to know Handow
 
-    # Run a plan with 2 workers in 2 stages
-    .../core> node ./handow --plan --/project/demoPlan
+[The rendering view of an example UAT demo](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
 
-    # Run a single story
-    .../core> node ./handow --story --/project/stories/demoStory.feature
+Clone the project and make sure [install Node.js](https://nodejs.org/en/download/) to you local machine. Then install dependencies under project root, e.g. _handow-core\/_, with:
 
+    $ npm install
 
-Handow CLI
+Run the built-in demos at project root path:
 
-    # Run a plan
-    > handow --plan=...
+    $ npm run demostory
+    OR
+    $ npm run demoplan
 
-    # Build stories
-    > handow --build
-
-    # Build and then run a plan
-    > handow --build --plan=...
-
-    # Run s story
-    > handow --story=...
-
-Run npm script
-
-    # Run a plan (extra '--' introduce parameter to handow as "process.argv")
-    > npm run handow -- --plan --/project/demoPlan
-
-    ...
-
-> **Attention**: A space is required between '--'  and parameter when pass variable to script from npm runner.
-    
