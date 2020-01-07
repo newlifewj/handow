@@ -31,7 +31,3 @@ stepBundles
 
 .vscode
 
-/lib/render/src/*/*
-/lib/render/src/*
-/lib/render/src
-/lib/render/test
