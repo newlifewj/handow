@@ -1,6 +1,8 @@
-# Handow (hand shadowing play UAT), the e2e BDD test tool for webapp
+# Handow - e2e BDD test tool for webapp
 
 There is no doubt that any program should be developed along with testing projects. There are so many testing types, framworks and tools. Each of them helps us in some way or another, and also has its specific drawbacks. If only one is allowed to deploy for our developing application, unfortunately it is usually, I will pick an e2e type UAT. Because a duck test can cover the whole application and, wothout surprise, it is usually the customers requirement. Handow is a tool and library to generate UAT project for browser oriented apps.
+
+> Project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer) project, and also a goodwill to play UAT easily.
 
 ## Features
 
@@ -17,7 +19,7 @@ Even more features like parameters conditional looping, run-time skipping, micro
 
 ## See demo to know Handow
 
-[The rendering view of an example UAT demo](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
+[Rendering example of an UAT report](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
 
 Clone the project and make sure [install Node.js](https://nodejs.org/en/download/) to you local machine. Then install dependencies under project root, e.g. _handow-core\/_, with:
 
@@ -28,6 +30,25 @@ Run the built-in demos at project root path:
     $ npm run demostory
     OR
     $ npm run demoplan
+
+## Usage
+
+### Scaffold an UAT project
+
+    npm i handow-core
+    # or "yarn add handow-core"
+
+Then call Handow API to handle Steps, Stories and Plans. Run them and render the reports.
+
+### Seed project
+
+Coming soon ...
+
+### Supper Handow
+
+Coming soon ...
+
+The framework 
 
 ## Documentation
 
