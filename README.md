@@ -13,6 +13,8 @@ There is no doubt that any program should be developed along with testing projec
 + Built-in single page report render
 + Cover page view and REST API testing
 
+Even more features like parameters conditional looping, run-time skipping, micro your literals... Please the [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop).
+
 ## See demo to know Handow
 
 [The rendering view of an example UAT demo](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
