@@ -22,12 +22,16 @@ build
 stepBundles
 
 # ignore for github respo
-render/src
-render/.eslintrc
-render/package.json
-render/package-lock.json
-render/webpack.config.dev.js
-render/webpack.config.prod.js
+# /lib/*/render/src/
+# render/.eslintrc
+# render/package.json
+# render/package-lock.json
+# render/webpack.config.dev.js
+# render/webpack.config.prod.js
 
-.project
 .vscode
+
+/lib/render/src/*/*
+/lib/render/src/*
+/lib/render/src
+/lib/render/test
