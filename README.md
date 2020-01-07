@@ -1,4 +1,4 @@
-# Handow - Hand shadowing play UAT
+# Handow (hand shadowing play UAT), the e2e BDD test tool for webapp UAT
 
 User need to do 3 things to use Handow UAT tool:
 
