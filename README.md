@@ -28,5 +28,3 @@ Run the built-in demos at project root path:
     $ npm run demoplan
 
 ## Documentation
-
-See Handow Site
