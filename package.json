@@ -1,12 +1,15 @@
 {
     "name": "handow",
-    "version": "v0.0.0",
-    "description": "browser side e2e-uat tool",
+    "version": "v0.0.1",
+    "description": "e2e BDD test tool for UAT project",
+    "main": "index.js",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/newlifewj/handow-core.git"
     },
-    "author": "J.W.",
+    "homepage": "https://github.com/newlifewj/handow-core",
+    "keywords": ["test", "e2e", "uat", "puppeteer", "javascript", "bdd", "handow"],
+    "author": "Jian Wang",
     "license": "MIT",
     "engines": {
         "node": ">=10.0.0"
