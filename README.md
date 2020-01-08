@@ -40,6 +40,45 @@ Run the built-in demos at project root path:
 
 Then call Handow API to handle Steps, Stories and Plans. Run them and render the reports.
 
+```js
+// Include handow-core
+const handow = require('handow-core');
+```
+
++ Run a test plan with multi-workers, e.g. 4-workers means running 4 stories could be eavaluated in parallel.
+
+```js
+// Include handow-core
+const handow = require('handow-core');
+handow.runPlan(plan, workers);
+```
+
++ Run specific story or stories.
+
+```js
+// Include handow-core
+const handow = require('handow-core');
+handow.runStories(stories, workers);
+```
+
++ Parse a literal story or stories.
+
+```js
+// Include handow-core
+const handow = require('handow-core');
+handow.parseStories(stories, wkrs);
+```
+
++ Build custom steps (The built-in steps are rebuilt in the meantime)
+
+```js
+// Include handow-core
+const handow = require('handow-core');
+handow.buildSteps(customStepsPath);
+```
+
+> Handow running in test project depending on a configuration file - _**config.js**_ located in project root. [Handow config]()
+
 ### Seed project
 
 Coming soon ...
