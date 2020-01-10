@@ -1,5 +1,5 @@
 {
-    "name": "handow",
+    "name": "handow-core",
     "version": "v0.0.1",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
