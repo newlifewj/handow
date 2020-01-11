@@ -20,6 +20,7 @@ node_modules
 reports
 build
 stepBundles
+_test
 
 # ignore for github respo
 # /lib/*/render/src/

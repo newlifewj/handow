@@ -1,1 +1,1 @@
-git push github dev:master
+ren test _test && git push github dev:master && ren _test test
