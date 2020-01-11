@@ -21,6 +21,7 @@ reports
 build
 stepBundles
 _test
+_doc
 
 # ignore for github respo
 # /lib/*/render/src/
