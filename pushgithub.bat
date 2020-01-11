@@ -1,1 +1,1 @@
-rmdir /Q /S doc && git add -A && git commit -m "Prepare pushing github repo" && git push --force github dev:master && git fetch origin && git reset --hard origin/dev
+rmdir /Q /S doc && git add -A && git commit -m "Prepare pushing github repo" && git push --force github dev:master && git reset --hard origin/dev
