@@ -10,15 +10,15 @@ const path = require('path');
 const esprima = require('esprima');
 const escodegen = require('escodegen');
 const glob = require('glob');
-const cnsl = require('../honsole');
-const herrorParse = require('../herrorParse');
+const cnsl = require('../lib/honsole');
+const herrorParse = require('../lib/herrorParse');
 
-const buildSteps = require('../buildSteps');
+const buildSteps = require('../lib/buildSteps');
 
 const deepExtend = require('deep-extend');
 
 // const config = deepExtend( require('../_config'), require('../../config') );
-const config = require('../planConfig').get();
+const config = require('../lib/planConfig').get();
 
 // Convert fs.readFile into Promise
 const rfPromise = util.promisify(fs.readFile);
