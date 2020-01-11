@@ -15,14 +15,14 @@
         "node": ">=10.0.0"
     },
     "bin": {
-        "handow": "./core/handow.js"
+        "handow": "./lib/handow.js"
     },
     "scripts": {
         "start": "",
         "demostory": "node ./lib/handow --story --/demo/project/stories/demostory",
         "demoplan": "node ./lib/handow --plan --/demo/project/demoplan",
         "buildsteps": "node ./lib/handow --buildsteps",
-        "handow": "cross-env NODE_PROGRAM=handow node ./core/handow.js"
+        "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js"
     },
     "dependencies": {
         "async": "^2.1.2",
