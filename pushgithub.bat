@@ -1,1 +1,6 @@
-ren test _test && git push github dev:master && ren _test test
+ren test _test
+&& git add -A
+&& git commit -m "Prepare pushing github repo"
+&& git push github dev:master
+&& git reset --hard HEAD
+&& git pull
