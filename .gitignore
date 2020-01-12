@@ -23,6 +23,7 @@ build
 stepBundles
 _test
 _doc
+_src
 
 # ignore for github respo
 # /lib/*/render/src/

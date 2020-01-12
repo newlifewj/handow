@@ -36,3 +36,55 @@ $ git remote -v
 
 > The CSR and Github remotes are not synchronous, we can not checkout both of them. The Github remote is just for hard updating.
 
+We use **force pushing** to update Github remote master branch from local dev.
+
+```
+// Force updating remote (named "github") "master" branch by local "dev" branch
+$ git push --force github dev:master
+```
+
+### Exclude source files to Github
+
+If we just update Github remote simply, all the controlled source files will published on Github (same as things on CDR). Of course we don't want publish all to Github, that means we need more sequential operations to exclude source files not going to Github.
+
+> Can not switch .gitignore to exclude source folder or files dynamically, sources are not ignored after they had committed before.
+
+We implement the direct way to ignore extra resource pushing to Github. The solution is: delete these ignored sources - commit - update Github - reset local repository to status before deleting these ignored sources. In order to make sure all these steps are performed easily and cirrectly, a .bat file is created.
+
+```bat
+:: (comment line) pushgithub.bat, exclude doc folder for updating github remote ('^' to break line)
+rmdir /Q /S doc && ^
+git add -A && ^
+git commit -m "Prepare pushing to github repository" && ^
+git push --force github dev:master --tags && ^
+git reset --hard origin/dev
+```
+
+The command pipe is quite clear.
+
++ Remove doc folder including contents, which is the resource not going to Github.
++ Commit the temporary change.
++ Force updating Github remote "master" branch with local dev.
++ Hard reset local with remote dev, then the repo is restored.
+
+So we just need one line to complete the task.
+
+```
+$ pushgithub
+```
+
+### Put a tag as version
+
+As for working on CSR, we pull/push source very frequently. That's not necessary to put any tag for each commit. Maybe just for some significant updating. 
+
+But now we have Github remote and NPM publishing, it's better to put tag on each NPM updating.
+
+Assuming we have commit all changes to CSR, **!!!Make Sure!!!**. And we decide to publish a new version to NPM, we should perform following sequential actions.
+
++ Change package.json, modify version to higher version what you want, e.g. "v1.0.2".
++ Then commit change.
++ Then put a tag to current commit, which is the version right now in package.json
++ Then push tags to CSR
+
+Now we have taged CSR, we can update
+
