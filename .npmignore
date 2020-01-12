@@ -1,6 +1,5 @@
 .bin
 .cache
-.classpath
 .data
 .sass-cache
 .settings
@@ -20,8 +19,10 @@ reports
 test
 build
 stepBundles
+doc
+demo
 
-# ignore for npm 
+# ignore for npm
 render/src
 render/.eslintrc
 render/package.json
