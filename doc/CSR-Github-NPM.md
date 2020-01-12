@@ -88,3 +88,15 @@ Assuming we have commit all changes to CSR, **!!!Make Sure!!!**. And we decide t
 
 Now we have taged CSR, we can update
 
+$ git tag v1.0.0
+
+Add a tag to local repository
+Add the tag to the most recent commit, Not Including the uncommitted changing.
+We can add a lot of tags without pushing them to remote.
+$ git tag
+
+Check all tags of locally, maybe some of them are not pushed to remote.
+
+$ git push --tags
+
+Pushed all local tags to remote.

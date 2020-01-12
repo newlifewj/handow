@@ -1,6 +1,6 @@
 {
     "name": "handow-core",
-    "version": "v0.0.1",
+    "version": "v0.0.4",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
