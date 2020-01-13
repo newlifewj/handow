@@ -17,78 +17,100 @@ There is no doubt that any program should be developed along with testing projec
 
 Even more features like parameters conditional looping, run-time skipping, micro your literals... Please the [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop).
 
-## See demo to know Handow
+## Install and Usage
 
-[Rendering example of an UAT report](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
+Make sure [install Node.js](https://nodejs.org/en/download/) to you local machine.
 
-Clone the project and make sure [install Node.js](https://nodejs.org/en/download/) to you local machine. Then install dependencies under project root, e.g. _handow-core\/_, with:
-
-    $ npm install
-
-Run the built-in demos at project root path:
-
-    $ npm run demostory
-    OR
-    $ npm run demoplan
-
-## Usage
-
-### Scaffold an UAT project
-
-    npm i handow-core
-    # or "yarn add handow-core"
-
-Then call Handow API to handle Steps, Stories and Plans. Run them and render the reports.
-
-```js
-// Include handow-core
-const handow = require('handow-core');
+```
+$ npm install handow
 ```
 
-+ Run a test plan with multi-workers, e.g. 4-workers means running 4 stories could be eavaluated in parallel.
+OR
 
-```js
-// Include handow-core
-const handow = require('handow-core');
-handow.runPlan(plan, workers);
+```
+$ yarn add handow
 ```
 
-+ Run specific story or stories.
+Handow support creating UAT project in 2 ways. The recommended mode is calling Hoandow CLI. In this case the test project is created to provide steps, stories and plans. Handow will run the test material as a consumer. Handow can also provide APIs called by test script, just as a node module.
 
-```js
-// Include handow-core
-const handow = require('handow-core');
-handow.runStories(stories, workers);
+### Handow CLI
+
+Handow CLI can explain itself. 
+
+```
+[root-path] $ npx handow --help
+> Handow CLI (with npx runner):   & npx handow --[task] [target-path]
+
+> --[task]                --plan          Run specific plan, followed by a plan path
+>                         --story         Run specific story or stories, followed by stories directory or '.feature' story path
+>                         --parsestory    Parse story or stories to suite(s), followed by stories directory or '.feature' story path
+>                         --buildstep     Build steps by specific custom step path, followed by custom steps path
+>                         --help          Show CLI help, default task
+
+> [target-path]             Target path relative with app root if target required for the task
+
+> Examples:                 [root-path]/$ npx handow --plan /project/myPlan
+>                           [root-path]/$ npx handow --buildstep
 ```
 
-+ Parse a literal story or stories.
+Handow can also be called by **npm script**, e.g. script property defined in _package.json_ of the test project.
 
-```js
-// Include handow-core
-const handow = require('handow-core');
-handow.parseStories(stories, wkrs);
+```json
+{
+    "scrpits": {
+        "myPlan": "handow --plan /project/myPlan"
+    }
+}
 ```
 
-+ Build custom steps (The built-in steps are rebuilt in the meantime)
+Then call Handow with npm runner:
 
-```js
-// Include handow-core
-const handow = require('handow-core');
-handow.buildSteps(customStepsPath);
+```
+$ npm run myPlan
 ```
 
-> Handow running in test project depending on a configuration file - _**config.js**_ located in project root. [Handow config]()
+### Handow API
+
+Handow methods:
+
+#### handow.runPlan(plan, workers)
+
+Run a plan with specific workers.
+
+    @plan {string} path of a plan file
+    @workers {integer} number of browser contexts running in parallel
+
+After _handow.runPlan(plan, workers)_ success finished, test report is generated and rendered basing on project config.
+
+#### handow.runStories(storyPath, workers)
+
+Run one or multiple stories with specific worker. (Handow arrange stories with a internal plan and run it)
+
+    @storyPath {string} path of a story file or directory contain stories
+    @workers {integer} number of browser contexts running in parallel
+
+The test report is generated and rendered according to configuration after success.
+
+#### Example
+
+```js
+const handow = require('handow');
+const fooPlan = `${__dirname}/project/plan/myPlan`;
+
+handow.runPlan(fooPlan, 4);
+```
+
+## Demo and Documentation
+
+[Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop). _(coming soon ...)_
+
+[A simple Handow UAT report example](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
 
 ### Seed project
 
-Coming soon ...
+[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold an UAT with Handow and how to run it. Start new test project by clone it and know Handow by demo.
 
-### Supper Handow
 
-Coming soon ...
+## Shandow - Super Handow Extension
 
-The framework 
-
-## Documentation
-
-Coming soon ...
+In design stage.
