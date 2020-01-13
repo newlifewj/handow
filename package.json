@@ -8,7 +8,15 @@
         "url": "https://github.com/newlifewj/handow-core.git"
     },
     "homepage": "https://github.com/newlifewj/handow-core",
-    "keywords": ["test", "e2e", "uat", "puppeteer", "javascript", "bdd", "handow"],
+    "keywords": [
+        "test",
+        "e2e",
+        "uat",
+        "puppeteer",
+        "javascript",
+        "bdd",
+        "handow"
+    ],
     "author": "Jian Wang",
     "license": "MIT",
     "engines": {
@@ -25,6 +33,7 @@
         "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js"
     },
     "dependencies": {
+        "app-root-path": "^3.0.0",
         "async": "^2.1.2",
         "axios": "^0.19.1",
         "babel-core": "^6.26.3",
@@ -64,7 +73,6 @@
         "puppeteer": "^2.0.0",
         "request": "^2.78.0",
         "request-promise": "^4.2.2",
-        "app-root-path": "^3.0.0",
         "session-file-store": "^1.2.0",
         "sockjs": "^0.3.19",
         "terminal-kit": "^1.31.4",
