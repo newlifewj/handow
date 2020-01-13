@@ -43,16 +43,31 @@ We use **force pushing** to update Github remote master branch from local dev.
 $ git push --force github dev:master
 ```
 
+If we also want Github repo is tagged, the updating command should be:
+
+```
+$ git push --force github dev:master --tags
+```
+
 ### Exclude source files to Github
 
-If we just update Github remote simply, all the controlled source files will published on Github (same as things on CDR). Of course we don't want publish all to Github, that means we need more sequential operations to exclude source files not going to Github.
+All the controlled source files will published on Github (same as stuffs on CDR) If we just update Github remote simply. That's not the requirement, instead some private and sensentive resources are forbidden on Github remote.
 
 > Can not switch .gitignore to exclude source folder or files dynamically, sources are not ignored after they had committed before.
 
-We implement the direct way to ignore extra resource pushing to Github. The solution is: delete these ignored sources - commit - update Github - reset local repository to status before deleting these ignored sources. In order to make sure all these steps are performed easily and cirrectly, a .bat file is created.
+We implement the direct way to ignore extra resource on Github pushing. It is a "multi-steps" solution:
+
++ Be sure every thing is commtted and pushed to CSR, local repositoy and IDE changing are clean.
++ Delete resources which need to be ignored on Github remote.
++ Commit the delete locally
++ Update Github remote
++ Hard reset local repository with CSR remote dev branch, then local dev is revovered
+
+Use a batch file (or shell script for none-windows) to perform all these sequential operations to make things easier. For example, we want ignore _**doc**_ folder on Github, the runner is _pushgithub.bat_:
 
 ```bat
 :: (comment line) pushgithub.bat, exclude doc folder for updating github remote ('^' to break line)
+
 rmdir /Q /S doc && ^
 git add -A && ^
 git commit -m "Prepare pushing to github repository" && ^
@@ -60,18 +75,21 @@ git push --force github dev:master --tags && ^
 git reset --hard origin/dev
 ```
 
-The command pipe is quite clear.
-
-+ Remove doc folder including contents, which is the resource not going to Github.
-+ Commit the temporary change.
-+ Force updating Github remote "master" branch with local dev.
-+ Hard reset local with remote dev, then the repo is restored.
-
-So we just need one line to complete the task.
+So we just need one line to complete theGithub remote updating task, **Great!!**
 
 ```
 $ pushgithub
 ```
+
+> Actually the tags (versions) are not necessary in Github, guessing people always clone the latest, but it's harmless anyway. However, the version tag is important for npm publishing and CSR history.
+
+## Publish module package to NPM
+
+
+
+
+.npmignore file, ignore more
+
 
 ### Put a tag as version
 
@@ -100,3 +118,20 @@ Check all tags of locally, maybe some of them are not pushed to remote.
 $ git push --tags
 
 Pushed all local tags to remote.
+
+The correct operation sequential **After modify version (e.g. v1.1) in package.json**
+
+```
+$ git add -u
+$ git commit -m "commit with version changed - v1.1"
+$ git pull
+$ git push              // pushed to remote dev, package.json is re-versioned
+$ git tag v1.1          // Added tag to current commit
+$ git push --tags       // push all tags, the v1.1 taged repo is same as dev Head now
+$ pushgithub            // push to github with tags, and local will be restored back to dev Head
+// Github doesn't has the v1.1 tag because dev is committed before tag it, it is okay
+```
+
+## Install package from Github or CSR remote
+
+## Use npm-link accessing local resources as npm-module-package
