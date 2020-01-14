@@ -1,5 +1,7 @@
 # Handow - e2e BDD test tool for webapp
 
+[A simple Handow UAT report example](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
+
 There is no doubt that any program should be developed along with testing projects. There are so many testing types, framworks and tools. Each of them helps us in some way or another, and also has its specific drawbacks. If only one is allowed to deploy for our developing application, unfortunately it is usually, I will pick an e2e type UAT. Because a duck test can cover the whole application and, wothout surprise, it is usually the customers requirement. Handow is a tool and library to generate UAT project for browser oriented apps.
 
 > Project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer) project, and also a goodwill to play UAT easily.
@@ -100,11 +102,9 @@ const fooPlan = `${__dirname}/project/plan/myPlan`;
 handow.runPlan(fooPlan, 4);
 ```
 
-## Demo and Documentation
+## Documentation
 
 [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop). _(coming soon ...)_
-
-[A simple Handow UAT report example](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
 
 ### Seed project
 
