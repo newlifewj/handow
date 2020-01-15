@@ -23,7 +23,7 @@ $ git remote -v
 Assuming a Github public repository was created for Handow, we add it as another remote.
 
 ```
-$ git add remote github https://github.com/newlifewj/handow-core.git    // named the adding remote as "github"
+$ git remote add github https://github.com/newlifewj/handow-core.git    // named the adding remote as "github"
 ```
 
 Then we can see the Github remote was added.
@@ -49,6 +49,14 @@ If we also want Github repo is tagged (it is not necessary but harmless), the up
 ```
 $ git push --force github dev:master --tags
 ```
+
+### Actually git can force pushing to other remote URL without adding it to local repo
+
+```
+$ git push --force https://github.com/newlifewj/handow-core.git dev:master
+```
+
+This works even we don't add _https://github.com/newlifewj/handow-core.git_ as a named remote to current local repository.
 
 ### Exclude source files for Github repo
 
