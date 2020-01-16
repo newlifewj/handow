@@ -12,16 +12,16 @@ There is no doubt that any program should be developed along with testing projec
 + Chrome orentied with Puppeteer driver
 + Complete JavaScript programming
 + Create test rapidly without coding (or a little bit code) basing on built-in steps library
-+ Schedule test with plan and plan runner
-+ Fast running by parallel stories with stages
++ Schedule test with plan and group stories with sequential stage
++ Fast running, execute stories of a stage in parallel by muli-workers
 + Built-in single page report render
-+ Cover page view and REST API testing
++ Cover page view, REST API and cookies testing
 
-Even more features like parameters conditional looping, run-time skipping, micro your literals... Please the [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop).
+Even more features like parameters conditional looping, run-time skipping, micro your literals... Please go the [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop) to see details.
 
 ## Install and Usage
 
-Make sure [install Node.js](https://nodejs.org/en/download/) to you local machine.
+Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine.
 
 ```
 $ npm install handow
@@ -40,7 +40,7 @@ Handow support creating UAT project in 2 ways. The recommended mode is calling H
 Handow CLI can explain itself. 
 
 ```
-[root-path] $ npx handow --help
+$ npx handow --help
 > Handow CLI (with npx runner):   & npx handow --[task] [target-path]
 
 > --[task]                --plan          Run specific plan, followed by a plan path
@@ -79,8 +79,10 @@ Handow methods:
 
 Run a plan with specific workers.
 
-    @plan {string} path of a plan file
-    @workers {integer} number of browser contexts running in parallel
+```
+@plan {string} path of a plan file
+@workers {integer} number of browser contexts running in parallel
+```
 
 After _handow.runPlan(plan, workers)_ success finished, test report is generated and rendered basing on project config.
 
@@ -88,8 +90,10 @@ After _handow.runPlan(plan, workers)_ success finished, test report is generated
 
 Run one or multiple stories with specific worker. (Handow arrange stories with a internal plan and run it)
 
-    @storyPath {string} path of a story file or directory contain stories
-    @workers {integer} number of browser contexts running in parallel
+```
+@storyPath {string} path of a story file or directory contain stories
+@workers {integer} number of browser contexts running in parallel
+```
 
 The test report is generated and rendered according to configuration after success.
 
@@ -106,10 +110,11 @@ handow.runPlan(fooPlan, 4);
 
 [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop). _(coming soon ...)_
 
+[The demo project](https://github.com/newlifewj/handow-seed) shows some tips.
+
 ### Seed project
 
 [A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold an UAT with Handow and run it in practice. It could the start point to launch a real UAT project.
-
 
 ## Shandow - Super Handow Extension
 
