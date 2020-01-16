@@ -70,6 +70,7 @@ Actually story literal can refer parameters in 3 ways:
 
 + steps for handow-core
 + steps for Super-UI (more reuse supporting and validation, online verify???)
++ Automatic for choosing _selector_ or _xpath_ basing on element format (that's a big help)
 
 ### ToDo - reuse browser context in same stage? Don't close one and then open a new one
 
@@ -110,7 +111,7 @@ Page listen to 'console' event, and record 'srror' type messages, and showing in
 
 Why handow-core doesn't include the render????????? no sense
 
-## Handow server and Super UI
+## Handow server and Super UI - Super Handow (SHandow)
 
 **Handow server and Super UI is not included in Handow core**.
 
@@ -127,11 +128,16 @@ Why handow-core doesn't include the render????????? no sense
 
 ## Handow website
 
++ Documentation
++ User monitor
++ Super Handoe authorization
++ paypal donation
+
 ## Traning book and video
 
 ## UX design tools integration
 
-Create test stories along with UX design. Greate value.
+Create test stories along with UX design. Greate value. --- merge into Super Handow
 
 
 ## Test generator by play application??
