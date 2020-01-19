@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.2.3",
+    "version": "v0.2.4",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
