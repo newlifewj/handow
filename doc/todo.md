@@ -1,22 +1,20 @@
 # Handow To Do
 
-## Handow Core
+## Developing plan
+
++ **Handow Site** documentation feature
++ **Document** files and reference solution
++ More **Built-in Steps** (50 in first stage??)
++ Add **Micro Step** feature to Handow core
++ **Shandow** story editor feature  (or create IDE pluggins???)
+
+> After these things, hopely Handow could be an usable tool. Then we can think about how to spread it to community.
+
+## Handow Core - ToDo
 
 The essential functions finshed.
 
-+ Story syntax
-+ Step syntax
-+ Parse story
-+ Build steps
-+ Run suite work flow
-+ Plan and plan runner
-+ Record and history
-+ CLI
-+ Console output
-
-fix bugs
-
-#### bug
+### bugs
 
 When finishing a plan, console output:
 
@@ -25,38 +23,37 @@ When finishing a plan, console output:
 
 Tottally no idea about it. Is it just bug in _terminai-kit_, e.g. the progress bar? But it seems not impact the test result.
 
-### ToDo - syntax for _handow probe attribute_ (almost finished) ?? necessary??
+### Micro statement
 
-+ define a custom attribute as probe, e.g. _config.htmlProbe == **h4w**_ , so user can add _h4w="profile-username-label"_ to test target element.
-+ special selector syntax "**[probe label]@h4w**" will be translated to selector _*[h4w='[probe label]']_.
-+ webpack loader and node script filter to clean the h4w attribute from .js or .html source file.
+Handow provide built-in steps library, users can create their story by referring built-in steps without writing step code (or just a little bit custom steps). That is a greate help for generating reliable test project rapidly. But using built-in steps has some drawbacks:
 
-    When I click it {selector: "SubmitButton"}
-    
-    parameters: {
-        SubmitButton: "profile-submit-btn@h4w"
-    }
++ Most built-in steps are "tiny" operations and verifications. It looks like a little bit verbose for story literal and report presenting if they are implemented in story statements.
++ The built-in steps user general and abstract label. However user, customer especially, would like the stories and reports are related with current bussiness.
 
-    // Suppose the html is:
-    \<button h4w='profile-submit-btn'\>Submit\</button\>
+Handow provide **micro** mapping syntax to re-labeled one or multiple steps. The story statements could be **Micro Steps** and they will reflect to reports too. So that user can get more readable stories and reports.
 
-> Never use h4w probe for any other purpose!!!
+Micro processing only happen in story parsing and reports generating stages.
 
-> Add more syntax sugar to probe???
++ Micro statements will be parsed to normal steps in story parsing stage.
++ Then they are executed exectly like none-misro stories
++ After report generated, Handow need additional process to refactor the normal reports to **micro style** reports - for stories implemented micro statements.
 
+### Selector Xpath probe automatically
 
-### ToDo - HTML render (almost finished)
+> This must be finished before adding more built-in steps. And all the existing steps need to be refactored.
 
+User needn't choose **selector steps** or **xpath steps** when he implement **Probe** to locate elements. Handow step will ayalisis the probe syntax and decide invoking correct method.
 
-### Todo - Global variable for stories
+### Add more built-in steps
 
-Parameters in story literal are constant now, and some of them are reused cross miltiple stories and steps. The issue is they are not easy to modified after changed. So, it is possible using a variable-parameter look-up table, then we can refactor the table to change parameters.
+Add 50 essential steps.
 
-> Just `${}` evaluate the parameters in steps?
+> Must considering about selector-xpath automatic and how to colaborate with **SHandow Story Editor**.
 
-Actually story literal can refer parameters in 3 ways:
+### Show page exception and errors together with screenshot
 
-+ the _@parameters_ object of current phase, these parameters are highest priority
+Page listen to 'console' event, and record 'srror' type messages, and showing in screenshot player.
+(Do it later ...)
 
 ### ToDo - IDE cooperating plugins (Eclipse, Intelliji, Vscode)
 
@@ -64,80 +61,61 @@ Actually story literal can refer parameters in 3 ways:
 + Dummy step generating
 + parameter syntax validation, e.g. missing ','
 
-### ToDo - API test integration
 
-### ToDo - Steps library
 
-+ steps for handow-core
-+ steps for Super-UI (more reuse supporting and validation, online verify???)
-+ Automatic for choosing _selector_ or _xpath_ basing on element format (that's a big help)
+### ToDo - reuse browser context in same stage? Don't close one and then open a new one ????????
 
-### ToDo - reuse browser context in same stage? Don't close one and then open a new one
+### Todo - story syntax checking and output info in parsestory ????????
 
-### ToDo - optional showing parameter value in report
-
-### ToDo - micro syntax for steps block reuse
-
-### Todo - story syntax checking and output info in parsestory
-
-### ToDo - parameter highlight in reports step title
-
-### ToDo - Story Editor (editor running in browser with more help functions, not using IDE anymore)
-
-### New CLI after deploy to npm
-
-#### New probe selector for 'contains', e.g. "porfile-title@h4w('My Profi')", to locate elements probed and contains 'My Profi' text.
 
 ### make pptr stable (Have solution already)
 
 (Need re-evaluate element before acting)
 
-### JSON, Https status, cookies and cookies in record
-
-+ When make an XHR call, should take care the JSON response (Done)
-+ When deeplink an URL, should take care about cookies and http status. (Done)
-+ Showing xhr expect probe object in XHR popover 
-
-### Show page exception and errors together with screenshot
-
-Page listen to 'console' event, and record 'srror' type messages, and showing in screenshot player.
-(Do it later ...)
-
-## Publish to Github and NPM
-
-+ **handow-core** to npm (and github)
-+ **handow-render** to npm (and github)
-+ **handow-seed-demo** project to github
-
-Why handow-core doesn't include the render????????? no sense
 
 ## Handow server and Super UI - Super Handow (SHandow)
 
 **Handow server and Super UI is not included in Handow core**.
 
-+ Host Handow to server
-+ Remote control
-+ Socket for real time watching
-+ Instrument Panel
-+ History listing and rendering
-+ History statistics
-+ Play test movie
+
+
 + !! ilias and trouble shooting on line, save to server database for friendly render and furure error analysis. Good idea??
-+ Instrument panel showing stories running in timeline, console showing stream info, choose story filter information, set alarm, break point,
+
 + web editor to write .feature story, more supporting and intracting than IDE?
 
-## Handow website
+## Handow Site
 
 + Documentation
 + User monitor
 + Super Handoe authorization
 + paypal donation
 
-## Traning book and video
+## Super Handow - Not included in Handow core
 
-## UX design tools integration
+Super Handow is not open source project, user need download and install it. We remtain the right to charge fee. Maybe we need a solution to encourage user pay anual fee (e.g. popover reminder to expired user).
 
-Create test stories along with UX design. Greate value. --- merge into Super Handow
+SHandow installed with authentication, so we know who is expired. The authen-center is a feature of **Handow Site**. 
 
+> The main part of SHandow is published to npm, but it need a **key-booting** routine to run. The **key-booting** is encripted for each user, and it is dowmload from Handow Site. The authen-centor can deactivate it or communicate with SHandow set some flags if user expired ...
 
-## Test generator by play application??
+keep thinking.
+
+### Story editor
+
++ web editor to write .feature story, more supporting and intracting than IDE?
+
+### Handow built-in server
+
++ Host Handow to server
++ Remote control
++ Socket for real time watching
+
+### Super UI
+
++ Screenshots carousel, showing error on screenshot images
++ Instrument panel showing stories running in timeline, console showing stream info, choose story filter information, set alarm, break point,
++ History listing and rendering
++ History statistics
++ Play test movie
+
+### Authentication flow
