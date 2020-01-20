@@ -4,7 +4,7 @@
 
 + **Handow Site** documentation feature
 + **Document** files and reference solution
-+ More **Built-in Steps** (50 in first stage??)
++ More **Built-in Steps** (consider about micro, selector/path automatoc and SHandow story editor, 50 in first stage??)
 + Add **Micro Step** feature to Handow core
 + **Shandow** story editor feature  (or create IDE pluggins???)
 

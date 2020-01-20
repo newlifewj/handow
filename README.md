@@ -114,7 +114,7 @@ handow.runPlan(fooPlan, 4);
 
 ### Seed project
 
-[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold an UAT with Handow and run it in practice. It could the start point to launch a real UAT project.
+[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold an UAT project with Handow and run it in practice. It could the start point to launch a real UAT project.
 
 ## Shandow - Super Handow Extension
 
