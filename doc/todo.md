@@ -89,6 +89,7 @@ Page listen to 'console' event, and record 'srror' type messages, and showing in
 + User monitor
 + Super Handoe authorization
 + paypal donation
++ get a domain, how about handow.com?
 
 ## Super Handow - Not included in Handow core
 

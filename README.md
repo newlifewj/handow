@@ -41,7 +41,7 @@ Handow CLI can explain itself.
 
 ```
 $ npx handow --help
-> Handow CLI (with npx runner):   & npx handow --[task] [target-path]
+> Handow CLI (with npx runner):   $ npx handow --[task] [target-path]
 
 > --[task]                --plan          Run specific plan, followed by a plan path
 >                         --story         Run specific story or stories, followed by stories directory or '.feature' story path
