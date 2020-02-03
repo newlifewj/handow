@@ -19,7 +19,7 @@ reports
 test
 build
 stepBundles
-doc
+devDoc
 demo
 
 # ignore for npm
