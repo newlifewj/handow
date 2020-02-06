@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.2.5",
+    "version": "v0.2.6",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
@@ -27,6 +27,7 @@
     },
     "scripts": {
         "start": "",
+        "form": "node ./lib/handow --story --/demo/project/stories/Form",
         "demostory": "node ./lib/handow --story --/demo/project/stories/demostory",
         "demoplan": "node ./lib/handow --plan --/demo/project/demoplan",
         "buildsteps": "node ./lib/handow --buildsteps",
