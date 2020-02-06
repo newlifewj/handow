@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.3.0",
+    "version": "v0.3.1",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
@@ -27,10 +27,13 @@
     },
     "scripts": {
         "start": "",
-        "form": "node ./lib/handow --story --/demo/project/stories/Form",
-        "demostory": "node ./lib/handow --story --/demo/project/stories/demostory",
-        "demoplan": "node ./lib/handow --plan --/demo/project/demoplan",
-        "buildsteps": "node ./lib/handow --buildsteps",
+        "form": "npm run runBuildsteps && npm run runFormStory",
+        "runFormStory": "node ./lib/handow --story --/demo/project/stories/Form_Story",
+        "demostory": "npm run runBuildsteps && npm run runDemostory",
+        "runDemostory": "node ./lib/handow --story --/demo/project/stories/demostory",
+        "demoplan": "npm run runBuildsteps && npm run runDemoplan",
+        "runDemoplan": "node ./lib/handow --plan --/demo/project/demoplan",
+        "runBuildsteps": "node ./lib/handow --buildsteps",
         "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js"
     },
     "dependencies": {
