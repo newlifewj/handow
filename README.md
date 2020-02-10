@@ -1,23 +1,23 @@
 # Handow - e2e BDD test tool for webapp
 
-[A simple Handow UAT report example](https://storage.googleapis.com/handow-uat-assets/static/uat-pet-store/index.html)
+To know what it is through [An UAT report example](http://www.handow.org/assets/reports/plan/index.html)
 
 There is no doubt that any program should be developed along with testing projects. There are so many testing types, framworks and tools. Each of them helps us in some way or another, and also has its specific drawbacks. If only one is allowed to deploy for our developing application, unfortunately it is usually, I will pick an e2e type UAT. Because a duck test can cover the whole application and, wothout surprise, it is usually the customers requirement. Handow is a tool and library to generate UAT project for browser oriented apps.
 
-> Project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer) project, and also a goodwill to play UAT easily.
+> Project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer) project, and also a goodwill for playing UAT easily.
 
 ## Features
 
 + Gherkin syntax compatible
-+ Chrome orentied with Puppeteer driver
++ Chrome orentied supported by Puppeteer driver
 + Complete JavaScript programming
-+ Create test rapidly without coding (or a little bit code) basing on built-in steps library
++ Create test rapidly without coding, or a little bit, basing on built-in steps library
 + Schedule test with plan and group stories with sequential stage
-+ Fast running, execute stories of a stage in parallel by muli-workers
++ Fast running, execute story groups in parallel by muli-workers
 + Built-in single page report render
 + Cover page view, REST API and cookies testing
 
-Even more features like parameters conditional looping, run-time skipping, micro your literals... Please go the [Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop) to see details.
+Go the [Handow Site](http://www.handow.org) for more detail.
 
 ## Install and Usage
 
@@ -106,16 +106,13 @@ const fooPlan = `${__dirname}/project/plan/myPlan`;
 handow.runPlan(fooPlan, 4);
 ```
 
-## Documentation
+## Documentation and demo project
 
-[Handow Site](https://docs.google.com/document/d/1rFdsDl7wZGsR47kMsQ28ki3OlAx9nVLl6fUmo2u198c/edit#heading=h.gfbuevxpquop). _(coming soon ...)_
+[Handow documentation and live demo](http://www.handow.org/documents)
 
-[The demo project](https://github.com/newlifewj/handow-seed) shows some tips.
-
-### Seed project
-
-[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold an UAT project with Handow and run it in practice. It could the start point to launch a real UAT project.
+[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold a Handow and run it in practice.
 
 ## Shandow - Super Handow Extension
 
-In design stage.
+_In design stage_
+
