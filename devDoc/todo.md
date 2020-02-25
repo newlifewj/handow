@@ -2,9 +2,9 @@
 
 ## Developing plan
 
-+ **Handow Site** documentation feature
-+ **Document** files and reference solution
-+ More **Built-in Steps** (consider about micro, selector/path automatoc and SHandow story editor, 50 in first stage??)
++ @On Borad@ **Handow Site** documentation feature
++ @On Borad@ **Document** files and reference solution
++ @On Borad@ More **Built-in Steps** (consider about micro, selector/path automatoc and SHandow story editor, 50 in first stage??)
 + Add **Micro Step** feature to Handow core
 + **Shandow** story editor feature  (or create IDE pluggins???)
 
@@ -44,7 +44,11 @@ Micro processing only happen in story parsing and reports generating stages.
 
 User needn't choose **selector steps** or **xpath steps** when he implement **Probe** to locate elements. Handow step will ayalisis the probe syntax and decide invoking correct method.
 
-### Add more built-in steps
+### Merge Given and When steps
+
+Must finish before **Add more built-in steps**
+
+### @Made progress already@ Add more built-in steps
 
 Add 50 essential steps.
 
@@ -52,8 +56,8 @@ Add 50 essential steps.
 
 ### Show page exception and errors together with screenshot
 
-Page listen to 'console' event, and record 'srror' type messages, and showing in screenshot player.
-(Do it later ...)
+Page listen to 'console' event, and record 'error' type messages, and showing in screenshot player.
+(Do it later ...) -- necaeesay??
 
 ### ToDo - IDE cooperating plugins (Eclipse, Intelliji, Vscode)
 
@@ -61,11 +65,14 @@ Page listen to 'console' event, and record 'srror' type messages, and showing in
 + Dummy step generating
 + parameter syntax validation, e.g. missing ','
 
+> Not necessary if SHandow is good for story editing
 
 
 ### ToDo - reuse browser context in same stage? Don't close one and then open a new one ????????
 
 ### Todo - story syntax checking and output info in parsestory ????????
+
+> Not necessary if SHandow is good for story editing
 
 
 ### make pptr stable (Have solution already)
@@ -104,6 +111,8 @@ keep thinking.
 ### Story editor
 
 + web editor to write .feature story, more supporting and intracting than IDE?
+
+Important and urgent now.
 
 ### Handow built-in server
 
