@@ -44,6 +44,10 @@ Micro processing only happen in story parsing and reports generating stages.
 
 User needn't choose **selector steps** or **xpath steps** when he implement **Probe** to locate elements. Handow step will ayalisis the probe syntax and decide invoking correct method.
 
+### Add @tags to story for report fiter
+
+Tags are added to each story, so that we can filter stories to groups. The **failed** and **passed** 2 tags are added automatically after story testing finished.
+
 ### Merge Given and When steps
 
 Must finish before **Add more built-in steps**
