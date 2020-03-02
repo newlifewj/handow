@@ -1,13 +1,13 @@
 {
     "name": "handow",
-    "version": "v0.3.7",
+    "version": "v0.3.8",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/newlifewj/handow-core.git"
     },
-    "homepage": "https://github.com/newlifewj/handow-core",
+    "homepage": "http://www.handow.org",
     "keywords": [
         "test",
         "e2e",
