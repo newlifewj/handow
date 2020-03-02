@@ -44,7 +44,7 @@ $ npx handow --help
 > Handow CLI (with npx runner):   $ npx handow --[task] [target-path]
 
 > --[task]                --plan          Run specific plan, followed by a plan path
->                         --story         Run specific story or stories, followed by stories directory or '.feature' story path
+>                         --story         Run specific story, followed by '.feature' story path
 >                         --parsestory    Parse story or stories to suite(s), followed by stories directory or '.feature' story path
 >                         --buildstep     Build steps by specific custom step path, followed by custom steps path
 >                         --help          Show CLI help, default task

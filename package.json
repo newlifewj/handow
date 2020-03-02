@@ -27,14 +27,16 @@
     },
     "scripts": {
         "start": "",
-        "form": "npm run runBuildsteps && npm run runFormStory",
-        "runFormStory": "node ./lib/handow --story --/demo/project/stories/Form_Story",
+        "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js",
+
         "demostory": "npm run runBuildsteps && npm run runDemostory",
-        "runDemostory": "node ./lib/handow --story --/demo/project/stories/demostory",
+        "form": "npm run runBuildsteps && npm run runFormStory",
         "demoplan": "npm run runBuildsteps && npm run runDemoplan",
-        "runDemoplan": "node ./lib/handow --plan --/demo/project/demoplan",
         "runBuildsteps": "node ./lib/handow --buildsteps",
-        "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js"
+
+        "runFormStory": "node ./lib/handow --story --/demo/project/stories/Form_Story",
+        "runDemostory": "node ./lib/handow --story --/demo/project/stories/demostory",
+        "runDemoplan": "node ./lib/handow --plan --/demo/project/demoplan"
     },
     "dependencies": {
         "app-root-path": "^3.0.0",
