@@ -36,7 +36,11 @@
 
         "runFormStory": "node ./lib/handow --story --/demo/project/stories/Form_Story",
         "runDemostory": "node ./lib/handow --story --/demo/project/stories/demostory",
-        "runDemoplan": "node ./lib/handow --plan --/demo/project/demo"
+        "runDemoplan": "node ./lib/handow --plan --/demo/project/demo",
+
+        "testrun": "node ./test/run.test.js",
+        "cotest": "node ./test/coshm.test.js",
+        "testRunStop": "node ./test/testRunStop.js"
     },
     "dependencies": {
         "app-root-path": "^3.0.0",

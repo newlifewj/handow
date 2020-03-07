@@ -1,0 +1,26 @@
+
+
+{
+    "shmMode": "public",
+    "workspace" : "/project",
+    "httpPort": 3333,
+    "httpsPort": 3443,
+    "apiPath": "/api",
+    "sessionSign": "_session@shm_",
+    "sessionExpire": 600000,
+    "admins": [
+        {
+            "email": "admin@email.com",
+            "username": "admin",
+            "password": "admin"
+        }
+    ],
+
+    "users": [
+        {
+            "email": "user@email.com",
+            "username": "user",
+            "password": "user"
+        }
+    ]
+}
