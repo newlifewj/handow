@@ -11,7 +11,9 @@ const path = require('path');
 
 ( () => {
     try {
-        handow.runPlan( path.join(`${appRoot}`, 'demo/project/demo.plan.json') );
+        handow.setRunningStatus(true, 1);
+        console.log(`----------${JSON.stringify(handow.handowStatus())}`);
+        //handow.runPlan( path.join(`${appRoot}`, 'demo/project/demo.plan.json') );
     } catch (e) {
         console.log("ERROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOR");
     }
