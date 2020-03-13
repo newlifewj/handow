@@ -122,4 +122,15 @@ After tag was added, it's only valid in local repository until pushing it especi
 $ git push --tags
 ```
 
+### handow-seed
+
+This project push same thing to CSR and Github, with 2 repository endpoint.
+
+After pushed to CSR origin/master, do:
+
+```
+git push github master:master
+```
+
+
 ## Use npm-link accessing local resources as npm-module-package
