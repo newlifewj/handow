@@ -70,3 +70,15 @@ We use a static plan.tree file as a tree of the plan. The tree is generated once
 + When handow is running, user can go to Runner, then he load current planTree from handow and show current burning.
 + The SSE start command will trigger runner updating plan tree
 
+### We still need planTree file in record (latest record and archived records)
+
+When SHMUI open an record, it will open the burned tree. This tree must be a file together with other record files. And the planTree must be archived.
+
++ When handow persist the record JSON file, it will persist current planTree into a file.
++ So SHMUI can open planTree of the record
+
+### Which tree is opened by Runner (of SHMUI)
+
++ When handle is idle, Runner doesn't open any planTree by default.
++ User can choose a plan from Explorer and open the plan tree in UI, but the plan tree is not set as **Running Tree** of handow before user run it.
++ User will open the running plan tree by default when handow is running (and he can not choose other plan from explorer when handow is running). The running tree object was set to handow status before that plan running.
