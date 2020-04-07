@@ -43,3 +43,30 @@ There is **sse** service existed in handow-core. SHM must pass the **res** refer
 
 The handow-core sse service is exported in handow API, so SHM can pass res to sse by call sse.init(res).
 
+## Generate planTree in run time
+
+SHMUI need the plan tree to show tree burning.
+
++ when handow is idle, user can always open a pan tree by select a plan from explorer.
++ when handow is running, user can not choose any plan from explorer.
++ when handow is running and user go to Runner, he can see current running plan tree burning. And the tree is updated when plan changed by schedule.
+
+### Can not use .plan.tree file
+
+We use a static plan.tree file as a tree of the plan. The tree is generated once user choose this plan from explorer, and then save it as file. Then we access this file as tree for future test running.
+
+**That doesn't work!!!!!!!!!!!!**
+
++ If user didn't open plan by choose it from explorer, the tree file is not created!!
++ After the tree file created, it is hard to update it when plan, parameter, stories ... changing!!!
++ So there will bw issues of no-tree or wrong-tree.
+
+### We always generate the tree in run time
+
++ When user choose a plan by runner's explorer, SHM ask handow generate the tree on fly.
++ When handow put a plan to run, it will generate the tree before run the plan, and save the tree to handow status (SHM can get the tree by handow.handowStatus).
++ No tree file existed, so the tree allways keep synchronous with plan, stories, parameters ...
++ User can open a tree and run the plan manually, then the tree burning is ahowing
++ When handow is running, user can go to Runner, then he load current planTree from handow and show current burning.
++ The SSE start command will trigger runner updating plan tree
+
