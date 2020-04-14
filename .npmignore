@@ -21,6 +21,7 @@ build
 stepBundles
 devDoc
 demo
+project
 
 # ignore for npm
 render/src

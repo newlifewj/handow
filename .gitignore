@@ -21,9 +21,14 @@ node_modules
 reports
 build
 stepBundles
+project
+project.*
 _test
 _doc
 _src
+
+./config.js
+./shmSetting.json
 
 # ignore for github respo
 # /lib/*/render/src/

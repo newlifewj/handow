@@ -28,16 +28,15 @@
     "scripts": {
         "start": "",
         "handow": "cross-env NODE_PROGRAM=handow node ./lib/handow.js",
-
         "demostory": "npm run runBuildsteps && npm run runDemostory",
         "form": "npm run runBuildsteps && npm run runFormStory",
         "demoplan": "npm run runBuildsteps && npm run runDemoplan",
         "runBuildsteps": "node ./lib/handow --buildsteps",
-
         "runFormStory": "node ./lib/handow --story --/demo/project/stories/Form_Story",
         "runDemostory": "node ./lib/handow --story --/demo/project/stories/demostory",
         "runDemoplan": "node ./lib/handow --plan --/demo/project/demo",
-
+        "labplan": "node ./lib/handow --plan --/project/labPlan_2",
+        "HandowLab": "node ./lib/handow --plan --/project/HandowLab",
         "testrun": "node ./test/run.test.js",
         "cotest": "node ./test/coshm.test.js",
         "testRunStop": "node ./test/testRunStop.js"
