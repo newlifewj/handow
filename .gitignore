@@ -15,20 +15,20 @@
 *.tmp
 *.zip
 ttt.*
-# /config.js
+
 
 node_modules
-reports
 build
-stepBundles
-project
-project.*
 _test
 _doc
 _src
 
-./config.js
-./shmSetting.json
+# Push the symlink to repository for developing record, but not publish them to NPM
+# project
+# stepBundles
+# reports
+# ./config.js
+# ./shmSetting.json
 
 # ignore for github respo
 # /lib/*/render/src/
