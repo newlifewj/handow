@@ -16,9 +16,15 @@
 *.zip
 ttt.*
 
+config.js
+shmSetting.json
+
 
 node_modules
 build
+records
+stepBundles
+project
 _test
 _doc
 _src
