@@ -14,6 +14,13 @@
 
 The essential functions finshed.
 
+### Prediction in testing (Or add a config item for this feature??)
+
++ If the **Given** scenario failed, should ignore all scenarios after it **in this loop** by set all actions and verifications to be **skipped**. -- not skipped, set broken and failed?
++ If an action of a **When** scenario failed, should ignore all following steps after it **in this scenario** by set actions and verifications to be **skipped**.
++ So that we can avoid testing basing on wrong situations.
+
+
 ### bugs
 
 When finishing a plan, console output:
@@ -44,9 +51,6 @@ Micro processing only happen in story parsing and reports generating stages.
 
 User needn't choose **selector steps** or **xpath steps** when he implement **Probe** to locate elements. Handow step will ayalisis the probe syntax and decide invoking correct method.
 
-### Add @tags to story for report fiter
-
-Tags are added to each story, so that we can filter stories to groups. The **failed** and **passed** 2 tags are added automatically after story testing finished.
 
 ### Merge Given and When steps
 
@@ -58,10 +62,6 @@ Add 50 essential steps.
 
 > Must considering about selector-xpath automatic and how to colaborate with **SHandow Story Editor**.
 
-### Show page exception and errors together with screenshot
-
-Page listen to 'console' event, and record 'error' type messages, and showing in screenshot player.
-(Do it later ...) -- necaeesay??
 
 ### ToDo - IDE cooperating plugins (Eclipse, Intelliji, Vscode)
 
@@ -73,10 +73,6 @@ Page listen to 'console' event, and record 'error' type messages, and showing in
 
 
 ### ToDo - reuse browser context in same stage? Don't close one and then open a new one ????????
-
-### Todo - story syntax checking and output info in parsestory ????????
-
-> Not necessary if SHandow is good for story editing
 
 
 ### make pptr stable (Have solution already)
@@ -94,42 +90,3 @@ Page listen to 'console' event, and record 'error' type messages, and showing in
 
 + web editor to write .feature story, more supporting and intracting than IDE?
 
-## Handow Site
-
-+ Documentation
-+ User monitor
-+ Super Handoe authorization
-+ paypal donation
-+ get a domain, how about handow.com?
-
-## Super Handow - Not included in Handow core
-
-Super Handow is not open source project, user need download and install it. We remtain the right to charge fee. Maybe we need a solution to encourage user pay anual fee (e.g. popover reminder to expired user).
-
-SHandow installed with authentication, so we know who is expired. The authen-center is a feature of **Handow Site**. 
-
-> The main part of SHandow is published to npm, but it need a **key-booting** routine to run. The **key-booting** is encripted for each user, and it is dowmload from Handow Site. The authen-centor can deactivate it or communicate with SHandow set some flags if user expired ...
-
-keep thinking.
-
-### Story editor
-
-+ web editor to write .feature story, more supporting and intracting than IDE?
-
-Important and urgent now.
-
-### Handow built-in server
-
-+ Host Handow to server
-+ Remote control
-+ Socket for real time watching
-
-### Super UI
-
-+ Screenshots carousel, showing error on screenshot images
-+ Instrument panel showing stories running in timeline, console showing stream info, choose story filter information, set alarm, break point,
-+ History listing and rendering
-+ History statistics
-+ Play test movie
-
-### Authentication flow
