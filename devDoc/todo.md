@@ -90,3 +90,10 @@ Add 50 essential steps.
 
 + web editor to write .feature story, more supporting and intracting than IDE?
 
+## Document for deploy SHM as cloud server
+
++ Deploy seed project to a new VM, Ubuntu 18.04.4 LTS (Bionic Beaver)
++ Use Nginx to proxy the Https server
++ Issues of pptr or Chromium (if existed) and resolver
++ How to cooperate with local dev (integrate with Git and Jekins)
+
