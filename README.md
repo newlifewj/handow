@@ -1,23 +1,27 @@
 # Handow - e2e BDD test tool for webapp
 
-To know what it is through [An UAT report example](http://www.handow.org/assets/reports/plan/index.html)
+Online demo:
 
-There is no doubt that any program should be developed along with testing projects. There are so many testing types, framworks and tools. Each of them helps us in some way or another, and also has its specific drawbacks. If only one is allowed to deploy for our developing application, unfortunately it is usually, I will pick an e2e type UAT. Because a duck test can cover the whole application and, wothout surprise, it is usually the customers requirement. Handow is a tool and library to generate UAT project for browser oriented apps.
+[Static view of a Handow UAT report](http://www.handow.org/assets/reports/plan/index.html)
+[The SHM server - a Handow implementation](http://demo.shm.handow.org/reports)
 
-> Project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer) project, and also a goodwill for playing UAT easily.
+Handow is a tool or library to generate E2E test project (e.g. UAT) for browsers oriented apps.
+
+> The project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer), and also a goodwill for playing TEST easily.
 
 ## Features
 
 + Gherkin syntax compatible
 + Chrome orentied supported by Puppeteer driver
 + Complete JavaScript programming
-+ Create test rapidly without coding, or a little bit, basing on built-in steps library
-+ Schedule test with plan and group stories with sequential stage
++ Create test suites rapidly without coding (or a little bit), basing on built-in steps library
++ Schedule test with plans and group stories with sequential stages
 + Fast running, execute story groups in parallel by muli-workers
 + Built-in single page report render
 + Cover page view, REST API and cookies testing
++ Cooperated with the test server - [SHM project](https://www.npmjs.com/package/handow-shm)
 
-Go the [Handow Site](http://www.handow.org) for more detail.
+Go the [Handow Site](http://www.handow.org) for more details.
 
 ## Install and Usage
 
@@ -34,6 +38,8 @@ $ yarn add handow
 ```
 
 Handow support creating UAT project in 2 ways. The recommended mode is calling Hoandow CLI. In this case the test project is created to provide steps, stories and plans. Handow will run the test material as a consumer. Handow can also provide APIs called by test script, just as a node module.
+
+**Actually most users prefer to clone the seed project** [handow-seed](https://github.com/newlifewj/handow-seed)
 
 ### Handow CLI
 
@@ -84,7 +90,7 @@ Run a plan with specific workers.
 @workers {integer} number of browser contexts running in parallel
 ```
 
-After _handow.runPlan(plan, workers)_ success finished, test report is generated and rendered basing on project config.
+After _handow.runPlan(plan, workers)_ finished successfully, test report is generated and rendered basing on project config.
 
 #### handow.runStories(storyPath, workers)
 
@@ -94,8 +100,6 @@ Run one or multiple stories with specific worker. (Handow arrange stories with a
 @storyPath {string} path of a story file or directory contain stories
 @workers {integer} number of browser contexts running in parallel
 ```
-
-The test report is generated and rendered according to configuration after success.
 
 #### Example
 
@@ -108,13 +112,8 @@ handow.runPlan(fooPlan, 4);
 
 ## Documentation and demo project
 
-[Handow documentation and live demo](http://www.handow.org/documents)
+[Handow documentation](http://www.handow.org/documents)
 
-[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold a Handow and run it in practice.
+[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold, maintain and run an UAT project.
 
-## Shandow - Super Handow Extension
-
-_In design stage_
-
-## Symbolic link with dev-project
 

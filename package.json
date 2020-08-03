@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.10.1",
+    "version": "v0.10.2",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
@@ -47,19 +47,20 @@
         "deep-extend": "^0.6.0",
         "error-stack-parser": "^2.0.4",
         "errorhandler": "^1.4.3",
-        "escodegen": "^1.12.0",
+        "escodegen": "^1.14.3",
         "esprima": "^4.0.1",
         "expect": "^24.9.0",
         "fs-extra": "^8.1.0",
         "glob": "^7.1.5",
-        "lodash": "^4.17.4",
+        "lodash": "^4.17.19",
         "log-symbols": "^3.0.0",
-        "open": "^7.0.0",
+        "open": "^7.1.0",
         "pending-xhr-puppeteer": "^2.1.0",
-        "puppeteer": "^2.0.0",
-        "terminal-kit": "^1.31.4"
+        "puppeteer": "^5.2.1",
+        "terminal-kit": "^1.42.0"
     },
     "devDependencies": {
+        "axios": "^0.19.2",
         "concurrently": "^3.5.0",
         "cross-env": "^5.1.6",
         "eslint": "^4.18.1",
