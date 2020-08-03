@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.10.2",
+    "version": "v0.10.3",
     "description": "e2e BDD test tool for UAT project",
     "main": "index.js",
     "repository": {
@@ -55,7 +55,7 @@
         "lodash": "^4.17.19",
         "log-symbols": "^3.0.0",
         "open": "^7.1.0",
-        "pending-xhr-puppeteer": "^2.1.0",
+        "pending-xhr-puppeteer": "^2.3.2",
         "puppeteer": "^5.2.1",
         "terminal-kit": "^1.42.0"
     },
