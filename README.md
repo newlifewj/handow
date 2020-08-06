@@ -5,21 +5,21 @@ Online demo:
 [Static view of a Handow UAT report](http://www.handow.org/assets/reports/plan/index.html)
 [The SHM server - a Handow implementation](http://demo.shm.handow.org/reports)
 
-Handow is a tool or library to generate E2E test project (e.g. UAT) for browsers oriented apps.
+Handow is a tool or library to generate E2E test project (e.g. UAT) for browser-oriented apps.
 
-> The project name comes from "Hand Shadow" to show respect to [Puppeteer](https://github.com/puppeteer/puppeteer), and also a goodwill for playing TEST easily.
+> The project name comes from "Hand Shadow" to show respect to [Puppeteer](https://pptr.dev/), and wish users play E2E test easily.
 
 ## Features
 
 + Gherkin syntax compatible
-+ Chrome orentied supported by Puppeteer driver
++ Chrome/Chromium orentied, driven by Puppeteer engine
 + Complete JavaScript programming
 + Create test suites rapidly without coding (or a little bit), basing on built-in steps library
-+ Schedule test with plans and group stories with sequential stages
-+ Fast running, execute story groups in parallel by muli-workers
++ Schedule test with plans and arrange stories with sequential stages
++ Fast running, execute story groups in parallel by multi-workers
 + Built-in single page report render
 + Cover page view, REST API and cookies testing
-+ Cooperated with the test server - [SHM project](https://www.npmjs.com/package/handow-shm)
++ Cooperate with the test server extension - [SHM project](https://www.npmjs.com/package/handow-shm)
 
 Go the [Handow Site](http://www.handow.org) for more details.
 
