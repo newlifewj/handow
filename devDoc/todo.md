@@ -1,15 +1,5 @@
 # Handow To Do
 
-## Developing plan
-
-+ @On Borad@ **Handow Site** documentation feature
-+ @On Borad@ **Document** files and reference solution
-+ @On Borad@ More **Built-in Steps** (consider about micro, selector/path automatoc and SHandow story editor, 50 in first stage??)
-+ Add **Micro Step** feature to Handow core
-+ **Shandow** story editor feature  (or create IDE pluggins???)
-
-> After these things, hopely Handow could be an usable tool. Then we can think about how to spread it to community.
-
 ## Handow Core - ToDo
 
 The essential functions finshed.
@@ -19,7 +9,9 @@ The essential functions finshed.
 + If the **Given** scenario failed, should ignore all scenarios after it **in this loop** by set all actions and verifications to be **skipped**. -- not skipped, set broken and failed?
 + If an action of a **When** scenario failed, should ignore all following steps after it **in this scenario** by set actions and verifications to be **skipped**.
 + So that we can avoid testing basing on wrong situations.
++ The **Given** and **When** steps failure is "Broken"
 
+> Make "broken" break current story. One a "broken" failure happened, auto-skip all following scenarions and steps. That need record skipped steps and scenarios and show them in report, we don't have it now!!
 
 ### bugs
 
@@ -52,11 +44,7 @@ Micro processing only happen in story parsing and reports generating stages.
 User needn't choose **selector steps** or **xpath steps** when he implement **Probe** to locate elements. Handow step will ayalisis the probe syntax and decide invoking correct method.
 
 
-### Merge Given and When steps
-
-Must finish before **Add more built-in steps**
-
-### @Made progress already@ Add more built-in steps
+### Add more built-in steps
 
 Add 50 essential steps.
 
@@ -80,20 +68,4 @@ Add 50 essential steps.
 (Need re-evaluate element before acting)
 
 
-## Handow server and Super UI - Super Handow (SHandow)
-
-**Handow server and Super UI is not included in Handow core**.
-
-
-
-+ !! ilias and trouble shooting on line, save to server database for friendly render and furure error analysis. Good idea??
-
-+ web editor to write .feature story, more supporting and intracting than IDE?
-
-## Document for deploy SHM as cloud server
-
-+ Deploy seed project to a new VM, Ubuntu 18.04.4 LTS (Bionic Beaver)
-+ Use Nginx to proxy the Https server
-+ Issues of pptr or Chromium (if existed) and resolver
-+ How to cooperate with local dev (integrate with Git and Jekins)
 
