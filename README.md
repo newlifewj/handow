@@ -39,11 +39,11 @@ $ yarn add handow
 
 Handow support creating UAT project in 2 ways. The recommended mode is calling Hoandow CLI. In this case the test project is created to provide steps, stories and plans. Handow will run the test material as a consumer. Handow can also provide APIs called by test script, just as a node module.
 
-**Actually most users prefer to clone the seed project** [handow-seed](https://github.com/newlifewj/handow-seed)
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **Actually most users prefer to clone the seed project** [handow-seed](https://github.com/newlifewj/handow-seed), and run test with Handow-SHM server and UI.
 
 ### Handow CLI
 
-Handow CLI can explain itself. 
+Handow CLI can explain itself.
 
 ```
 $ npx handow --help
