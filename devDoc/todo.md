@@ -59,13 +59,18 @@ Add 50 essential steps.
 
 > Not necessary if SHandow is good for story editing
 
+### Use device list to initial browser view port
 
-### ToDo - reuse browser context in same stage? Don't close one and then open a new one ????????
+### Firefox support, pptr suports Firefox now, but I don't think is worth do this.
+
+Add properties to _config and override it in plan:
+
+{
+    device: "desktop", // "desktop lg" | "iPhone 7" | "Kindle Fire HDX landscape" | ...
+    browser: "Chromium" // "Firefox", "Chrome" ...  // Is it necessarilly???
+}
 
 
-### make pptr stable (Have solution already)
-
-(Need re-evaluate element before acting)
 
 
 

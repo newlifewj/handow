@@ -160,3 +160,14 @@ Handow implement a sub set of Gerkin syntax, but not obey the Gerkin completly, 
 + How to identify parameters array or object?
 + We get a string array of each line
 + Then we can process the array with code.
+
+## Puppeteer v5.2.1 issue
+
++ When we use pptr-v5.2.1 in { headless: false }
++ And I run story local_nav.feature
++ Then I get "[Error: EPERM: operation not permitted, unlink  ...]" and cannot finished story running normally.
++ And I cannot see the static render presenting the report view
++ And I can see the Chromium instance still live through window's Task Manager
++ And I see 'C:\Users\newli\AppData\Local\Temp\puppeteer_dev_chrome_profile-Gb0hcO\CrashpadMetrics-active.pma', which is locked by the unclosed chrimium instance.
+
+That's a serious problem. I cannot imstall puppeteer again (Error -4048, cannot DELETE the puppeteer stuffs) until delete the CrashpadMetrics-active.pma files manually.
