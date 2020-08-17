@@ -70,7 +70,7 @@ Add properties to _config and override it in plan:
     browser: "Chromium" // "Firefox", "Chrome" ...  // Is it necessarilly???
 }
 
-
+### Story validation cannot handle comma missing in @parameters
 
 
 
