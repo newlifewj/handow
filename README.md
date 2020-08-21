@@ -77,6 +77,8 @@ Then call Handow with npm runner:
 $ npm run myPlan
 ```
 
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Users always run their auto-test plans by SHM servers. But they still need the **Handow CLI** to call a single Handow operation or run a single story. That's important for test developers to verify a new created story or custom steps. In developing stage, the browser realtime-display and the rich console-output are much more important than the test reports.
+
 ### Handow API
 
 Handow methods:
