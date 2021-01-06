@@ -68,7 +68,7 @@
         "terminal-kit": "^1.42.0"
     },
     "devDependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "concurrently": "^3.5.0",
         "cross-env": "^5.1.6",
         "eslint": "^7.7.0",
