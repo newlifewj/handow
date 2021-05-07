@@ -158,6 +158,8 @@ body {
 .Step__step___2Uqkr {
   padding: 10px;
   border-bottom: 1px lightgray dotted; }
+  .Step__step___2Uqkr pre {
+    display: inline-block; }
 
 .Step__title___1lVSP {
   display: inline-block;

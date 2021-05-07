@@ -1,6 +1,9 @@
 .step {
     padding: 10px;
     border-bottom: 1px lightgray dotted;
+    pre {
+        display: inline-block;
+    }
 }
 
 .title {
