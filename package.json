@@ -1,6 +1,6 @@
 {
     "name": "handow",
-    "version": "v0.18.0",
+    "version": "v0.18.1",
     "description": "e2e BDD test tool for UAT project",
     "keywords": [
         "test",
