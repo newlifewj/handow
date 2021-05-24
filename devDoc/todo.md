@@ -73,4 +73,13 @@ Add properties to _config and override it in plan:
 ### Story validation cannot handle comma missing in @parameters
 
 
+## Story timeout to fix the story infinite blocking
+
+When a story start, set a timer for it e.g. 10 minutes, If a story last more than 10 minutes, it is terminited immediately!
+
+## Make sure clear all browsers launched in current machine
+
+Once a browser is launched, we remember the references to a global list. Once test finished or abort by any reason, we need to iterate this browser list to make sure they are closed.
+
+
 

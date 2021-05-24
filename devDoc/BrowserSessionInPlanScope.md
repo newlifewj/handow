@@ -10,4 +10,28 @@ How to fix this:
 + If _browserSessionScope !== 'story'_, the browser is launched in plan scope, and every story access this browser instance for test. And the browser context is closed when plan finished.
 + If _browserSessionScope === 'story'_, the browser is launched in every story and closed in the end of every story.
 
+## Valid setting
+
+```json
+{
+    "headlessChromium": true,
+    "browserSessionScope": "plan",
+    "newIncognitoContext": false
+}
+```
+
+The prowser session will be shared in different stories running in different stages, work well
+
+## Invalid setting
+
+```json
+{
+    "headlessChromium": true,
+    "browserSessionScope": "plan",
+    "newIncognitoContext": true
+}
+```
+
+If each story open a **newIncognitoContext**, the stories cannot share same browser session. So we don't need specify **newIncognitoContext** at all. If the **browserSessionScope** is **plan**, we always use default browser context
+
 
