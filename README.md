@@ -1,45 +1,22 @@
-# Handow - e2e BDD test tool for webapp
+# Handow test engine
 
-Online demo:
-
-[Static view of a Handow UAT report](http://www.handow.org/assets/reports/plan/index.html)
-[The SHM server - a Handow implementation](http://demo.shm.handow.org/reports)
-
-Handow is a tool or library to generate E2E test project (e.g. UAT) for browser-oriented apps.
-
-> The project name comes from "Hand Shadow" to show respect to [Puppeteer](https://pptr.dev/), and wish users play E2E test easily.
+**handow-core** pacjage is the test engine of Handow - the E2E test tool.
 
 ## Features
 
-+ Gherkin syntax compatible
-+ Chrome/Chromium orentied, driven by Puppeteer engine
-+ Complete JavaScript programming
-+ Create test suites rapidly without coding (or a little bit), basing on built-in steps library
-+ Schedule test with plans and arrange stories with sequential stages
-+ Fast running, execute story groups in parallel by multi-workers
-+ Built-in single page report render
-+ Cover page view, REST API and cookies testing
-+ Cooperate with the test server extension - [SHM project](https://www.npmjs.com/package/handow-shm)
-
-Go the [Handow Site](http://www.handow.org) for more details.
++ **Playwright** or **Puppeteer** browser driver API
++ Simplified Gherkin syntax for story, scenario and step literal and hooking
++ Built-in step library and custom steps integration
++ Parameter, loop and condition functions
++ Report and static report render
++ CMD interface
 
 ## Install and Usage
-
-Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine.
+Make sure [Node.js >= v12.0](https://nodejs.org/en/download/) has been installed to your local machine.
 
 ```
 $ npm install handow
 ```
-
-OR
-
-```
-$ yarn add handow
-```
-
-Handow support creating UAT project in 2 ways. The recommended mode is calling Hoandow CLI. In this case the test project is created to provide steps, stories and plans. Handow will run the test material as a consumer. Handow can also provide APIs called by test script, just as a node module.
-
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **Actually most users prefer to clone the seed project** [handow-seed](https://github.com/newlifewj/handow-seed), and run test with Handow-SHM server and UI.
 
 ### Handow CLI
 
@@ -77,7 +54,8 @@ Then call Handow with npm runner:
 $ npm run myPlan
 ```
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Users always run their auto-test plans by SHM servers. But they still need the **Handow CLI** to call a single Handow operation or run a single story. That's important for test developers to verify a new created story or custom steps. In developing stage, the browser realtime-display and the rich console-output are much more important than the test reports.
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Users can implement **handow-core** solely or include it in their own applications as an API privider. It is recommended to run **handow-core** with **handow-shm** (Handoe Manageent Server), please clone the Handow Seed to get an [out of the box project with demo](https://github.com/newlifewj/handow-seed).
+
 
 ### Handow API
 
