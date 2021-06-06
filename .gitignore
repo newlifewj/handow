@@ -25,6 +25,7 @@ build
 records
 stepBundles
 project
+documents
 _test
 _doc
 _src

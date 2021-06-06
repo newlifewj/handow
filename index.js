@@ -1,5 +1,9 @@
 'use strict';
 
-// entry of npm require refer - it is the _handow.js file
+/**
+ * The entry module handow-core project
+ * @module handow-core
+ * @description The "main" property in package.json hooks to this module. It wraps the _handow.js module to provide handow APIs.
+ */
 module.exports = require('./lib/_handow');
 

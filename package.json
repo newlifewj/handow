@@ -48,7 +48,8 @@
         "HandowLab": "node ./lib/handow --plan --/project/HandowLab",
         "testrun": "node ./test/run.test.js",
         "cotest": "node ./test/coshm.test.js",
-        "testRunStop": "node ./test/testRunStop.js"
+        "testRunStop": "node ./test/testRunStop.js",
+        "mdDoc": "jsdoc2md --files lib/eventBus.js > documents/index.js.md"
     },
     "dependencies": {
         "app-root-path": "^3.0.0",
@@ -74,6 +75,9 @@
         "eslint": "^7.7.0",
         "eslint-plugin-import": "^2.22.0",
         "eslint-plugin-node": "^11.1.0",
+        "gitbook-cli": "~2.3.2",
+        "jsdoc": "~3.6.7",
+        "jsdoc-to-markdown": "~7.0.1",
         "nodemon": "^2.0.7",
         "shelljs": "^0.8.4"
     }
