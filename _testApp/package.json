@@ -1,0 +1,23 @@
+{
+    "name": "handow-project",
+    "scripts": {
+        "start": "",
+        "handow": "handow",
+        "buildSteps": "handow --buildstep",
+        "parseStory": "handow --parsestory --project/stories/TestStory.feature",
+        "TestStory": "handow --buildstep && handow --story project/stories/TestStory.feature",
+        "TestPlan": "handow --buildstep && handow --plan project/TestPlan"
+    },
+    "dependencies": {
+        "handow": "file:../handow"
+    },
+    "devDependencies": {
+        "concurrently": "^6.0.1",
+        "cross-env": "^7.0.3",
+        "deep-extend": "^0.6.0",
+        "expect": "^26.6.2",
+        "lodash": "^4.17.21",
+        "nodemon": "^2.0.4",
+        "open": "^7.0.0"
+    }
+}

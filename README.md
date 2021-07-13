@@ -1,26 +1,31 @@
-# Handow test engine
+Handow is an E2E test engine basing on [Playwright Node.js APIs](https://playwright.dev/docs/intro/). Users can integrate it with **handow-shm** to scaffold a full featured test server, or run the test engine solely in command line. Test developers can also import **handow** to Node.js application as APIs provider.
 
-**handow-core** pacjage is the test engine of Handow - the E2E test tool.
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Highly recommended to clone the [handow-seed](https://github.com/newlifewj/handow-seed) to scaffold your test project if you are **Handow users**.
+
+> **Who are handow users?** The Handow users just want to import **handow** as a module package in their E2E applications. The **handow-seed** project is ready for Handow users' requirements. If you prefer creating custom project and invoke Handow APIs by script or command line, please refer [Handow APIs and Command](https://github.com/newlifewj/handow/wiki/Handow-APIs-and-Command). However, it's appreciate for Handow users spending time to investigate **handow** source code.
 
 ## Features
 
-+ **Playwright** or **Puppeteer** browser driver API
-+ Simplified Gherkin syntax for story, scenario and step literal and hooking
-+ Built-in step library and custom steps integration
-+ Parameter, loop and condition functions
-+ Report and static report render
-+ CMD interface
++ Driven by **Playwright APIs** 
++ Simplified Gherkin syntax for test story
++ Built-in steps library and custom steps integration
++ Parameters passing from story and params file
++ Static report generation
++ Multi-workers for parallel running
 
-## Install and Usage
-Make sure [Node.js >= v12.0](https://nodejs.org/en/download/) has been installed to your local machine.
+Refer [Handow Outline](https://github.com/newlifewj/handow/wiki/Handow-Outline) to see more details.
+
+## Install
+
+Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions **">=12.0.0 && <15.0.0"** are recommended).
 
 ```
 $ npm install handow
+# Detect handow installed
+$ npm run handow
 ```
 
-### Handow CLI
-
-Handow CLI can explain itself.
+Then the handow help info is printed.
 
 ```
 $ npx handow --help
@@ -38,62 +43,21 @@ $ npx handow --help
 >                           [root-path]/$ npx handow --buildstep
 ```
 
-Handow can also be called by **npm script**, e.g. script property defined in _package.json_ of the test project.
+## Usage
 
-```json
-{
-    "scrpits": {
-        "myPlan": "handow --plan /project/myPlan"
-    }
-}
-```
+Handow developers (code contributors or users who fork handow and customize it in other applications ) can run handow as a Node.js module in an E2E test project, debug it, improve it, or implement the code to others applications. Follow [Develop handow module package](https://github.com/newlifewj/handow/wiki/Develop-Handow-Module-Package) to run **handow** package and debug source code.
 
-Then call Handow with npm runner:
+## Resources
 
-```
-$ npm run myPlan
-```
+[Documentation](https://github.com/newlifewj/handow/wiki)
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Users can implement **handow-core** solely or include it in their own applications as an API privider. It is recommended to run **handow-core** with **handow-shm** (Handoe Manageent Server), please clone the Handow Seed to get an [out of the box project with demo](https://github.com/newlifewj/handow-seed).
+The seed project to implement Handow on Github [handow](https://github.com/newlifewj/handow-seed)
 
+The Handow test server repository on NPM [handow-shm](https://www.npmjs.com/package/handow-shm)
 
-### Handow API
+The Handow engin repository on NPM [handow](https://www.npmjs.com/package/handow)
 
-Handow methods:
+## License
 
-#### handow.runPlan(plan, workers)
-
-Run a plan with specific workers.
-
-```
-@plan {string} path of a plan file
-@workers {integer} number of browser contexts running in parallel
-```
-
-After _handow.runPlan(plan, workers)_ finished successfully, test report is generated and rendered basing on project config.
-
-#### handow.runStories(storyPath, workers)
-
-Run one or multiple stories with specific worker. (Handow arrange stories with a internal plan and run it)
-
-```
-@storyPath {string} path of a story file or directory contain stories
-@workers {integer} number of browser contexts running in parallel
-```
-
-#### Example
-
-```js
-const handow = require('handow');
-const fooPlan = `${__dirname}/project/plan/myPlan`;
-
-handow.runPlan(fooPlan, 4);
-```
-
-## Documentation and demo project
-
-[Handow documentation](http://www.handow.org/documents)
-
-[A seed project](https://github.com/newlifewj/handow-seed) showing how to scaffold, maintain and run an UAT project.
-
+MIT
 
