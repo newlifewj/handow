@@ -20,32 +20,10 @@ Refer [Handow Outline](https://github.com/newlifewj/handow/wiki/Handow-Outline) 
 Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions **">=12.0.0 && <15.0.0"** are recommended).
 
 ```
-$ npm install handow
-# Detect handow installed
-$ npm run handow
+$ npm install
 ```
 
-Then the handow help info is printed.
-
-```
-$ npx handow --help
-> Handow CLI (with npx runner):   $ npx handow --[task] [target-path]
-
-> --[task]                --plan          Run specific plan, followed by a plan path
->                         --story         Run specific story, followed by '.feature' story path
->                         --parsestory    Parse story or stories to suite(s), followed by stories directory or '.feature' story path
->                         --buildstep     Build steps by specific custom step path, followed by custom steps path
->                         --help          Show CLI help, default task
-
-> [target-path]             Target path relative with app root if target required for the task
-
-> Examples:                 [root-path]/$ npx handow --plan /project/myPlan
->                           [root-path]/$ npx handow --buildstep
-```
-
-## Usage
-
-Handow developers (code contributors or users who fork handow and customize it in other applications ) can run handow as a Node.js module in an E2E test project, debug it, improve it, or implement the code to others applications. Follow [Develop handow module package](https://github.com/newlifewj/handow/wiki/Develop-Handow-Module-Package) to run **handow** package and debug source code.
+Handow test engine is not a stand alone application. In order to run and debug the local handow project as a Node.js module, it must be installed to a main test application. The _"/\_testApp/"_ folder is a simple main test project [Install local handow project to main test](https://github.com/newlifewj/handow/tree/master/_testApp)
 
 ## Resources
 
