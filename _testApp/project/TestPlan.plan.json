@@ -1,0 +1,18 @@
+{
+    "title": "Test Plan",
+    "stages": [
+        {
+            "stage": "Stage name",
+            "description": "Stage desc",
+            "stories": [ "TestStory" ]
+        }
+    ],
+    "config": {
+        "consoleOutput": "story",
+        "pwtAPI": "Chromium",
+        "browserSessionScope": "plan",
+        "headless": true,
+        "workers": 1,
+        "saveJsonReport": true
+    }
+}
