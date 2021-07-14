@@ -17,7 +17,7 @@ Refer [Handow Outline](https://github.com/newlifewj/handow/wiki/Handow-Outline) 
 
 ## Install
 
-Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions **">=12.0.0 && <15.0.0"** are recommended).
+Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions **">=12.0.0 && <15.0.0"** are recommended.
 
 ```
 $ npm install
@@ -30,7 +30,7 @@ Handow test engine is not a stand alone application. In order to run and debug t
 
 [Documentation](https://github.com/newlifewj/handow/wiki)
 
-The seed project to implement Handow on Github [handow](https://github.com/newlifewj/handow-seed)
+The seed project to implement Handow on Github [handow-seed](https://github.com/newlifewj/handow-seed)
 
 The Handow test server repository on NPM [handow-shm](https://www.npmjs.com/package/handow-shm)
 
